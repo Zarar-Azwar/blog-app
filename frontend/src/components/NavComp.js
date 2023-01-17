@@ -11,8 +11,8 @@ const NavComp = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
             
-            <NavLink style={{marginRight:'5px'}} className="nav-item nav-link active" exact to="/">Home <span className="sr-only">(current)</span></NavLink>
-            <NavLink style={{marginLeft:'5px'}} className="nav-item nav-link" exact to="/blog">Blogs</NavLink>
+            <NavLink style={{marginRight:'5px'}} className="nav-item nav-link active"  to="/">Home <span className="sr-only">(current)</span></NavLink>
+            <NavLink style={{marginLeft:'5px'}} className="nav-item nav-link" to="/blog">Blogs</NavLink>
             
             </div>
         </div>
