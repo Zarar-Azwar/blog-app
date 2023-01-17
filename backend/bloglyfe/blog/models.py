@@ -34,7 +34,7 @@ class BlogPost(models.Model):
         while(queryset):
             slug=original_slug+'-'+str(count)
             count+=1
-            queryset=BlogPost.objects.all().filter(slug__iexact=original_slug).count()
+            queryset=BlogPost.objects.all().filter(slug__iexact=slug).count()
         self.slug=slug
         
         if self.featured:
@@ -45,8 +45,8 @@ class BlogPost(models.Model):
                     temp.save()
             except BlogPost.DoesNotExist:
                 pass
-        super(BlogPost,self).save(**args, **kwargs)
+        super(BlogPost,self).save(*args, **kwargs)
     def __str__(self):
-        self.title
+        return self.title
 
 
